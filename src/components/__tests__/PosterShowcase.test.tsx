@@ -24,17 +24,14 @@ describe('PosterShowcase', () => {
     expect(screen.getByText(/Risograph-style tactile yellow poster/i)).toBeInTheDocument();
   });
 
-  it('opens and closes lightbox modal', () => {
+  it('renders download PDF button and does not render specifications or inspect poster', () => {
     render(<PosterShowcase />);
 
-    const inspectBtn = screen.getByText('INSPECT POSTER');
-    fireEvent.click(inspectBtn);
+    const downloadLink = screen.getByRole('link', { name: /download pdf/i });
+    expect(downloadLink).toBeInTheDocument();
+    expect(downloadLink).toHaveAttribute('href', '/assets/poster-night.pdf');
 
-    expect(screen.getByRole('dialog')).toBeInTheDocument();
-
-    const closeBtn = screen.getByLabelText('Close modal');
-    fireEvent.click(closeBtn);
-
-    expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
+    expect(screen.queryByText(/SPECIFICATIONS/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/INSPECT POSTER/i)).not.toBeInTheDocument();
   });
 });

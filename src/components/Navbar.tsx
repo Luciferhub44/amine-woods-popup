@@ -28,7 +28,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
           <div className="flex flex-col">
             <span className="font-mono text-xs sm:text-sm font-black tracking-wider uppercase text-white group-hover:text-brand-yellow transition-colors">
-              Amine Woods <span className="text-brand-yellow font-normal">×</span> Mothrland
+              Amine Woods
             </span>
             <span className="font-mono text-[10px] text-zinc-400 flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow animate-pulse" />

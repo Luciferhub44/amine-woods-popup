@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUp, Sparkles, Heart } from 'lucide-react';
+import { ArrowUp, Sparkles } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -88,9 +88,7 @@ export const Footer: React.FC = () => {
         {/* Bottom credits & Back to top */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-zinc-500">
           <div className="flex items-center gap-1">
-            <span>© 2026 Amine Woods × Mothrland Atelier. Built with</span>
-            <Heart className="w-3 h-3 text-brand-red fill-brand-red inline" />
-            <span>in Poznań.</span>
+            <span>© 2026 Amine Woods × Mothrland Atelier.</span>
           </div>
 
           <button
