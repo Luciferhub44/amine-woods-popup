@@ -8,7 +8,6 @@ interface Poster {
   imageSrc: string;
   pdfSrc: string;
   description: string;
-  tags: string[];
 }
 
 const POSTERS: Poster[] = [
@@ -20,7 +19,6 @@ const POSTERS: Poster[] = [
     pdfSrc: '/assets/poster-night.pdf',
     description:
       'High-contrast neo-brutalist graphic with deep cosmic starburst textures, 3D extruded yellow POP UP typography, and warning-red event ribbons.',
-    tags: ['Neo-Brutalist', 'Starfield Texture', '3D Extrusion', 'Free Entry'],
   },
   {
     id: 'poster-2',
@@ -30,7 +28,6 @@ const POSTERS: Poster[] = [
     pdfSrc: '/assets/poster-editorial.pdf',
     description:
       'Risograph-style tactile yellow poster featuring subtle hand-drawn fashion figure illustrations, garment manifesto, and the complete showroom program.',
-    tags: ['Editorial', 'Riso Print', 'Garment Manifesto', 'Hand-Drawn Sketches'],
   },
 ];
 
@@ -123,18 +120,6 @@ export const PosterShowcase: React.FC = () => {
               <p className="text-zinc-300 font-mono text-sm leading-relaxed">
                 {activePoster.description}
               </p>
-
-              {/* Tags */}
-              <div className="flex flex-wrap gap-2 pt-2">
-                {activePoster.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="font-mono text-xs px-2.5 py-1 bg-brand-card border border-zinc-700 text-zinc-300"
-                  >
-                    #{tag}
-                  </span>
-                ))}
-              </div>
             </div>
 
             {/* Action Buttons */}

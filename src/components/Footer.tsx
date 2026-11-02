@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUp, Sparkles } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -42,7 +42,6 @@ export const Footer: React.FC = () => {
           {/* Quick statement */}
           <div className="text-center md:text-right max-w-sm">
             <div className="text-white font-bold uppercase tracking-wider text-sm flex items-center justify-center md:justify-end gap-1.5">
-              <Sparkles className="w-3.5 h-3.5 text-brand-yellow" />
               <span>A ONE-DAY POP-UP COLLISION</span>
             </div>
             <p className="text-zinc-500 mt-1">

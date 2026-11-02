@@ -6,7 +6,7 @@ describe('GarmentLanguage', () => {
   it('renders section title and list of principles', () => {
     render(<GarmentLanguage />);
 
-    expect(screen.getByText(/Garment/i)).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /Garment/i })).toBeInTheDocument();
     expect(screen.getByText('UPCYCLED FABRICS')).toBeInTheDocument();
     expect(screen.getByText('NUMBERED PIECES')).toBeInTheDocument();
   });
@@ -21,11 +21,8 @@ describe('GarmentLanguage', () => {
     expect(screen.queryByText('UPCYCLED FABRICS')).not.toBeInTheDocument();
   });
 
-  it('toggles expansion detail on card click', () => {
+  it('renders principle details clearly', () => {
     render(<GarmentLanguage />);
-
-    const numberedCard = screen.getByText('NUMBERED PIECES');
-    fireEvent.click(numberedCard);
 
     expect(screen.getByText(/Every single piece released at the pop-up carries a registered edition number/i)).toBeInTheDocument();
   });

@@ -7,16 +7,16 @@ describe('PosterShowcase', () => {
     render(<PosterShowcase />);
 
     expect(screen.getByText(/The Dual/i)).toBeInTheDocument();
-    const nightButtons = screen.getAllByText('Night / Rave Edition');
-    expect(nightButtons.length).toBeGreaterThanOrEqual(1);
-    const editorialButtons = screen.getAllByText('Editorial / Riso Edition');
-    expect(editorialButtons.length).toBeGreaterThanOrEqual(1);
+    const heroButtons = screen.getAllByText('MAIN HERO');
+    expect(heroButtons.length).toBeGreaterThanOrEqual(1);
+    const eventButtons = screen.getAllByText('MAIN EVENTS');
+    expect(eventButtons.length).toBeGreaterThanOrEqual(1);
   });
 
-  it('switches to Editorial / Riso Edition when clicked', () => {
+  it('switches to MAIN EVENTS when clicked', () => {
     render(<PosterShowcase />);
 
-    const tabButtons = screen.getAllByRole('button', { name: /Editorial \/ Riso Edition/i });
+    const tabButtons = screen.getAllByRole('button', { name: /MAIN EVENTS/i });
     fireEvent.click(tabButtons[0]);
 
     const editions = screen.getAllByText('FINAL POSTER 02');
@@ -24,7 +24,7 @@ describe('PosterShowcase', () => {
     expect(screen.getByText(/Risograph-style tactile yellow poster/i)).toBeInTheDocument();
   });
 
-  it('renders download PDF button and does not render specifications or inspect poster', () => {
+  it('renders download PDF button without hashtags or specifications', () => {
     render(<PosterShowcase />);
 
     const downloadLink = screen.getByRole('link', { name: /download pdf/i });
@@ -33,5 +33,6 @@ describe('PosterShowcase', () => {
 
     expect(screen.queryByText(/SPECIFICATIONS/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/INSPECT POSTER/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/#Neo-Brutalist/i)).not.toBeInTheDocument();
   });
 });

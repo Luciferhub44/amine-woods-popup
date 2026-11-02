@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, MapPin, Sparkles, ArrowDown, Download, ExternalLink } from 'lucide-react';
+import { Calendar, MapPin, ArrowDown, Download, ExternalLink } from 'lucide-react';
 import { CountdownTimer } from './CountdownTimer';
 import { downloadIcsFile, getGoogleCalendarUrl } from '../utils/calendar';
 
@@ -93,7 +93,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRsvp }) => {
             type="button"
             className="w-full sm:w-auto flex-1 flex items-center justify-center gap-3 bg-brand-yellow hover:bg-brand-yellowHover text-black font-mono font-black text-sm uppercase px-8 py-4 border-2 border-black shadow-brutal-yellow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all"
           >
-            <Sparkles className="w-5 h-5 fill-black" />
             <span>CLAIM FREE PASS</span>
           </button>
 

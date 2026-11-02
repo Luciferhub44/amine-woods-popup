@@ -9,6 +9,8 @@ describe('InTheRoom', () => {
     expect(screen.getByText(/In The/i)).toBeInTheDocument();
     expect(screen.getByText('A2 ORIGINAL PAINTINGS BY SENAMIE')).toBeInTheDocument();
     expect(screen.getByText('OFFCUT PHONE POUCHES')).toBeInTheDocument();
+    expect(screen.queryByText('EVERYDAY ESSENTIALS')).not.toBeInTheDocument();
+    expect(screen.queryByText('FUTURE WORKSHOP OBJECTS')).not.toBeInTheDocument();
   });
 
   it('updates spotlight card when an item is selected', () => {

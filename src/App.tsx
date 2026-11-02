@@ -40,7 +40,6 @@ export const App: React.FC = () => {
             'CLOTHES',
             'ART',
             'SOUND',
-            'COLOR',
             'WARMTH',
             'SMELL',
             'CREATIVE FASHION NETWORK',
@@ -63,7 +62,7 @@ export const App: React.FC = () => {
             'SENAMIE PAINTINGS',
             'PHONE POUCHES',
             'ONE-OF-ONE PIECES',
-            'WORKSHOP OBJECTS',
+            'SOUND & PEOPLE',
             'DOCUMENTATION',
           ]}
         />

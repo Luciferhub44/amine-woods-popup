@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Sparkles, Download, Check, Ticket, Calendar } from 'lucide-react';
+import { X, Download, Check, Ticket, Calendar } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { downloadIcsFile } from '../utils/calendar';
 
@@ -106,7 +106,7 @@ export const RsvpPassModal: React.FC<RsvpPassModalProps> = ({ isOpen, onClose })
                   type="submit"
                   className="w-full bg-brand-yellow hover:bg-brand-yellowHover text-black font-mono font-black text-sm uppercase py-4 border-2 border-black shadow-brutal-white transition-all flex items-center justify-center gap-2"
                 >
-                  <Sparkles className="w-4 h-4 fill-black" />
+                  <Ticket className="w-4 h-4" />
                   <span>GENERATE MY PASS</span>
                 </button>
               </div>
