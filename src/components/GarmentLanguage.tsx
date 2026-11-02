@@ -59,38 +59,6 @@ const PRINCIPLES: GarmentPrinciple[] = [
     description: 'Safety pins, mismatch buttons, custom textile dyes, and hand-painted insignias ensure no two pieces possess identical hardware.',
     badge: 'Unique Artifact',
   },
-  {
-    id: 'altered-proportions',
-    number: '07',
-    title: 'ALTERED PROPORTIONS',
-    category: 'Silhouette',
-    description: 'Cropped torsos with elongated sleeves and voluminous pant legs create a distinctive, street-rooted avant-garde stance.',
-    badge: 'Sculptural Fit',
-  },
-  {
-    id: 'utility-interrupted',
-    number: '08',
-    title: 'UTILITY, INTERRUPTED',
-    category: 'Silhouette',
-    description: 'Cargo pockets placed in non-standard zones and functional loops reimagined as sculptural accents rather than pure ergonomics.',
-    badge: 'Subverted Duty',
-  },
-  {
-    id: 'worn-texture',
-    number: '09',
-    title: 'WORN TEXTURE',
-    category: 'Material',
-    description: 'Softened stonewash, faded sun-bleached panels, and authentic textile patinas deliver character and familiar comfort from day one.',
-    badge: 'Vintage Touch',
-  },
-  {
-    id: 'numbered-pieces',
-    number: '10',
-    title: 'NUMBERED PIECES',
-    category: 'Craft',
-    description: 'Hand-stamped serial stamps and archive badges verify exclusivity. Every single piece released at the pop-up carries a registered edition number.',
-    badge: 'Archive Series',
-  },
 ];
 
 export const GarmentLanguage: React.FC = () => {
@@ -114,7 +82,7 @@ export const GarmentLanguage: React.FC = () => {
               Garment <span className="text-brand-yellow">Language</span>
             </h2>
             <p className="text-zinc-400 font-mono text-sm max-w-xl mt-2">
-              The 10 foundational construction tenets defining the Amine Woods collection.
+              The 6 foundational construction tenets defining the Amine Woods collection.
             </p>
           </div>
 
@@ -137,7 +105,7 @@ export const GarmentLanguage: React.FC = () => {
           </div>
         </div>
 
-        {/* Simplified Principles Grid */}
+        {/* Simplified Principles Grid (01 - 06) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredPrinciples.map((item) => (
             <div

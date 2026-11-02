@@ -8,7 +8,13 @@ describe('GarmentLanguage', () => {
 
     expect(screen.getByRole('heading', { name: /Garment/i })).toBeInTheDocument();
     expect(screen.getByText('UPCYCLED FABRICS')).toBeInTheDocument();
-    expect(screen.getByText('NUMBERED PIECES')).toBeInTheDocument();
+    expect(screen.getByText('ONE-OFF DETAILS')).toBeInTheDocument();
+
+    // Verify 07 - 10 are removed
+    expect(screen.queryByText('ALTERED PROPORTIONS')).not.toBeInTheDocument();
+    expect(screen.queryByText('UTILITY, INTERRUPTED')).not.toBeInTheDocument();
+    expect(screen.queryByText('WORN TEXTURE')).not.toBeInTheDocument();
+    expect(screen.queryByText('NUMBERED PIECES')).not.toBeInTheDocument();
   });
 
   it('filters principles by category', () => {
@@ -24,6 +30,6 @@ describe('GarmentLanguage', () => {
   it('renders principle details clearly', () => {
     render(<GarmentLanguage />);
 
-    expect(screen.getByText(/Every single piece released at the pop-up carries a registered edition number/i)).toBeInTheDocument();
+    expect(screen.getByText(/No virgin textiles are consumed—each roll carries a documented past/i)).toBeInTheDocument();
   });
 });

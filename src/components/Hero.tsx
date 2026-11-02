@@ -30,39 +30,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRsvp }) => {
 
       {/* Main Content Stage */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 flex-1 flex flex-col justify-center items-center text-center">
-        {/* Floating "Fashion & Art" burst badge from poster */}
-        <div className="relative mb-4 sm:mb-6 animate-float-slow">
-          <img
-            src="/assets/1.png"
-            alt="Fashion & Art"
-            className="w-48 sm:w-64 md:w-72 drop-shadow-glow-yellow transform -rotate-3 hover:rotate-0 transition-transform cursor-pointer"
-          />
-        </div>
-
-        {/* 3D Isometric POP UP Typography */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 my-2 sm:my-4">
-          <div className="transform hover:scale-105 transition-transform duration-300">
-            <img
-              src="/assets/5.png"
-              alt="POP"
-              className="h-24 sm:h-36 md:h-44 object-contain filter drop-shadow-2xl"
-            />
-          </div>
-          <div className="transform hover:scale-105 transition-transform duration-300">
-            <img
-              src="/assets/4.png"
-              alt="UP"
-              className="h-24 sm:h-36 md:h-44 object-contain filter drop-shadow-2xl"
-            />
-          </div>
-        </div>
-
-        {/* Collaborators Subtitle */}
-        <div className="mt-4 mb-6 flex flex-wrap items-center justify-center gap-3 sm:gap-6 font-mono text-sm sm:text-lg tracking-widest text-zinc-300">
-          <span className="text-brand-yellow font-black">BY AMINE WOODS</span>
+        {/* Main Event Headline */}
+        <h1 className="mt-4 mb-6 flex flex-wrap items-center justify-center gap-3 sm:gap-6 font-mono text-3xl sm:text-5xl md:text-6xl font-black tracking-widest text-zinc-300 uppercase">
+          <span className="text-brand-yellow">AMINE WOODS</span>
           <span className="text-brand-red font-bold">✕</span>
-          <span className="text-white font-black tracking-wider">MOTHRLAND ATELIER</span>
-        </div>
+          <span className="text-white tracking-wider">MOTHRLAND ATELIER</span>
+        </h1>
 
         {/* Key Event Badges */}
         <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 my-6">

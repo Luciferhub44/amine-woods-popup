@@ -10,6 +10,9 @@ describe('LocationGuide', () => {
     expect(screen.getByText(/28 CZERWCA 1956 ROKU 128/i)).toBeInTheDocument();
     const aptMatches = screen.getAllByText(/APARTMENT 09/i);
     expect(aptMatches.length).toBeGreaterThanOrEqual(1);
+
+    // Verify "Finding Apartment 09" is removed
+    expect(screen.queryByText(/Finding Apartment 09/i)).not.toBeInTheDocument();
   });
 
   it('handles address copying', async () => {

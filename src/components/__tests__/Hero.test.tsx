@@ -3,13 +3,18 @@ import { describe, it, expect, vi } from 'vitest';
 import { Hero } from '../Hero';
 
 describe('Hero', () => {
-  it('renders title elements and collaborator names', () => {
+  it('renders collaborator names and confirms POP UP and Fashion & Art are removed', () => {
     render(<Hero onOpenRsvp={vi.fn()} />);
 
-    expect(screen.getByAltText('POP')).toBeInTheDocument();
-    expect(screen.getByAltText('UP')).toBeInTheDocument();
-    expect(screen.getByText(/BY AMINE WOODS/i)).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /AMINE WOODS/i })).toBeInTheDocument();
     expect(screen.getByText(/MOTHRLAND ATELIER/i)).toBeInTheDocument();
+
+    // Verify Fashion & Art and POP UP are removed entirely
+    expect(screen.queryByText('FASHION & ART')).not.toBeInTheDocument();
+    expect(screen.queryByText(/POP UP/i)).not.toBeInTheDocument();
+    expect(screen.queryByAltText('POP')).not.toBeInTheDocument();
+    expect(screen.queryByAltText('UP')).not.toBeInTheDocument();
+    expect(screen.queryByAltText('Fashion & Art')).not.toBeInTheDocument();
   });
 
   it('triggers onOpenRsvp on CTA button click', () => {

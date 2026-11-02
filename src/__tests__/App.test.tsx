@@ -13,8 +13,7 @@ describe('App', () => {
     // Header & Hero
     const amineWoodsMatches = screen.getAllByText(/Amine Woods/i);
     expect(amineWoodsMatches.length).toBeGreaterThanOrEqual(1);
-    expect(screen.getByAltText('POP')).toBeInTheDocument();
-    expect(screen.getByAltText('UP')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /AMINE WOODS/i })).toBeInTheDocument();
 
     // Posters
     expect(screen.getByText(/The Dual/i)).toBeInTheDocument();
@@ -29,7 +28,7 @@ describe('App', () => {
     expect(screen.getByRole('heading', { name: /In The Room/i })).toBeInTheDocument();
 
     // Location heading
-    expect(screen.getByRole('heading', { name: /Finding Apartment 09/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /The Location/i })).toBeInTheDocument();
   });
 
   it('opens and closes RSVP modal from Navbar action', () => {

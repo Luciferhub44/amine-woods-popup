@@ -7,7 +7,7 @@ describe('PosterShowcase', () => {
     render(<PosterShowcase />);
 
     expect(screen.getByText(/The Dual/i)).toBeInTheDocument();
-    const heroButtons = screen.getAllByText('MAIN HERO');
+    const heroButtons = screen.getAllByText('MAIN POSTER');
     expect(heroButtons.length).toBeGreaterThanOrEqual(1);
     const eventButtons = screen.getAllByText('MAIN EVENTS');
     expect(eventButtons.length).toBeGreaterThanOrEqual(1);

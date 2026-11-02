@@ -13,7 +13,7 @@ interface Poster {
 const POSTERS: Poster[] = [
   {
     id: 'poster-1',
-    name: 'MAIN HERO',
+    name: 'MAIN POSTER',
     edition: 'FINAL POSTER 01',
     imageSrc: '/assets/poster-night.png',
     pdfSrc: '/assets/poster-night.pdf',
