@@ -17,13 +17,12 @@ describe('Hero', () => {
     expect(screen.queryByAltText('Fashion & Art')).not.toBeInTheDocument();
   });
 
-  it('triggers onOpenRsvp on CTA button click', () => {
-    const handleRsvp = vi.fn();
-    render(<Hero onOpenRsvp={handleRsvp} />);
+  it('does not render CLAIM FREE PASS button and renders calendar actions', () => {
+    render(<Hero />);
 
-    const ctaButton = screen.getByText('CLAIM FREE PASS');
-    fireEvent.click(ctaButton);
-    expect(handleRsvp).toHaveBeenCalledTimes(1);
+    expect(screen.queryByText(/CLAIM FREE PASS/i)).not.toBeInTheDocument();
+    expect(screen.getByText('.ICS')).toBeInTheDocument();
+    expect(screen.getByText('GOOGLE CAL')).toBeInTheDocument();
   });
 
   it('renders event date and location badges', () => {

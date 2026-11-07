@@ -7,19 +7,18 @@ describe('Navbar', () => {
     const handleOpenRsvp = vi.fn();
     render(<Navbar onOpenRsvp={handleOpenRsvp} />);
 
-    expect(screen.getByText(/Amine Woods/i)).toBeInTheDocument();
+    const logo = screen.getByAltText('Amine Woods') as HTMLImageElement;
+    expect(logo).toBeInTheDocument();
+    expect(logo.src).toContain('/assets/Amine_Logo.png');
+    expect(screen.queryByText('AW')).not.toBeInTheDocument();
     expect(screen.getByText('Posters')).toBeInTheDocument();
     expect(screen.getByText('Garment Language')).toBeInTheDocument();
     expect(screen.getByText('Location')).toBeInTheDocument();
   });
 
-  it('calls onOpenRsvp when FREE PASS button is clicked', () => {
-    const handleOpenRsvp = vi.fn();
-    render(<Navbar onOpenRsvp={handleOpenRsvp} />);
-
-    const button = screen.getByText('FREE PASS');
-    fireEvent.click(button);
-    expect(handleOpenRsvp).toHaveBeenCalledTimes(1);
+  it('does not render FREE PASS button', () => {
+    render(<Navbar />);
+    expect(screen.queryByText('FREE PASS')).not.toBeInTheDocument();
   });
 
   it('toggles mobile menu when hamburger is clicked', () => {

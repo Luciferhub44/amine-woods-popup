@@ -15,7 +15,7 @@ const ROOM_ITEMS: RoomItem[] = [
   {
     id: 'reworked-garments',
     title: 'REWORKED GARMENTS',
-    artistOrLead: 'Amine Woods',
+    artistOrLead: 'AmineWoods',
     badge: 'Limited Archive',
     icon: <ShoppingBag className="w-5 h-5 text-brand-yellow" />,
     description: 'Statement outerwear, structural vests, and altered denim engineered from salvaged textiles.',
@@ -33,7 +33,7 @@ const ROOM_ITEMS: RoomItem[] = [
   {
     id: 'phone-pouches',
     title: 'OFFCUT PHONE POUCHES',
-    artistOrLead: 'Amine Woods × Workshop',
+    artistOrLead: 'AmineWoods × Workshop',
     badge: 'Everyday Object',
     icon: <Box className="w-5 h-5 text-brand-yellow" />,
     description: 'Modular tactile cross-body pouches constructed from garment cutting scraps with climbing cord and steel clasps.',
@@ -42,7 +42,7 @@ const ROOM_ITEMS: RoomItem[] = [
   {
     id: 'one-of-one',
     title: 'ONE-OF-ONE PIECES',
-    artistOrLead: 'Amine Woods',
+    artistOrLead: 'AmineWoods',
     badge: '1 of 1 Exclusives',
     icon: <Flame className="w-5 h-5 text-brand-yellow" />,
     description: 'Singular showstopper garments that will never be duplicated. Unique dye bleeds, patchwork configurations, and signature hardware.',
@@ -91,11 +91,10 @@ export const InTheRoom: React.FC = () => {
                 <div
                   key={item.id}
                   onClick={() => setActiveItemId(item.id)}
-                  className={`p-4 border-2 cursor-pointer font-mono transition-all flex items-center justify-between ${
-                    isSelected
-                      ? 'border-brand-yellow bg-brand-card shadow-brutal-yellow translate-x-1'
-                      : 'border-zinc-800 bg-brand-dark hover:border-zinc-700 hover:text-white'
-                  }`}
+                  className={`p-4 border-2 cursor-pointer font-mono transition-all flex items-center justify-between ${isSelected
+                    ? 'border-brand-yellow bg-brand-card shadow-brutal-yellow translate-x-1'
+                    : 'border-zinc-800 bg-brand-dark hover:border-zinc-700 hover:text-white'
+                    }`}
                 >
                   <div className="flex items-center gap-3">
                     <span className="font-mono text-xs font-black text-brand-yellow">
@@ -112,11 +111,10 @@ export const InTheRoom: React.FC = () => {
                   </div>
 
                   <span
-                    className={`text-[10px] uppercase font-bold px-2 py-0.5 border ${
-                      isSelected
-                        ? 'bg-brand-yellow text-black border-black font-black'
-                        : 'border-zinc-700 text-zinc-400'
-                    }`}
+                    className={`text-[10px] uppercase font-bold px-2 py-0.5 border ${isSelected
+                      ? 'bg-brand-yellow text-black border-black font-black'
+                      : 'border-zinc-700 text-zinc-400'
+                      }`}
                   >
                     {item.badge}
                   </span>

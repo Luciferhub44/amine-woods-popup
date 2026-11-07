@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Amine Woods x Mothrland Atelier//POP UP Event//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Amine Woods x Mothrland Atelier POP UP
+BEGIN:VEVENT
+UID:amine-woods-mothrland-popup-20261114@aminewoods.com
+DTSTAMP:20261106T120000Z
+SUMMARY:Amine Woods x Mothrland Atelier POP UP
+DESCRIPTION:A one-day collision of garments, paintings, objects, sound and people. Free entry.
+LOCATION:Mothrland Atelier, 28 Czerwca 1956 Roku 128, Apartment 09, Poznań, Poland
+DTSTART:20261114T130000Z
+DTEND:20261114T190000Z
+SEQUENCE:0
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

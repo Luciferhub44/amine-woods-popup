@@ -31,18 +31,11 @@ describe('App', () => {
     expect(screen.getByRole('heading', { name: /The Location/i })).toBeInTheDocument();
   });
 
-  it('opens and closes RSVP modal from Navbar action', () => {
+  it('confirms Free Pass and Claim Pass buttons are removed across the app', () => {
     render(<App />);
 
-    const openBtns = screen.getAllByText('FREE PASS');
-    fireEvent.click(openBtns[0]);
-
-    expect(screen.getByRole('dialog')).toBeInTheDocument();
-    expect(screen.getByText('Register for Free Entry')).toBeInTheDocument();
-
-    const closeBtn = screen.getByLabelText('Close pass modal');
-    fireEvent.click(closeBtn);
-
+    expect(screen.queryByText('FREE PASS')).not.toBeInTheDocument();
+    expect(screen.queryByText('CLAIM FREE PASS')).not.toBeInTheDocument();
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
   });
 });

@@ -51,7 +51,7 @@ export const LocationGuide: React.FC = () => {
                 28 CZERWCA 1956 ROKU 128
               </p>
               <p className="font-mono text-sm text-zinc-300">
-                APARTMENT 09 • WILDAS DISTRICT, POZNAŃ
+                APARTMENT 09 • WILDA, POZNAŃ
               </p>
             </div>
 
@@ -81,7 +81,7 @@ export const LocationGuide: React.FC = () => {
             <div className="pt-6 border-t border-zinc-800 grid grid-cols-2 gap-4 font-mono text-xs">
               <div>
                 <span className="text-zinc-500 uppercase block mb-1">DATE:</span>
-                <span className="text-white font-bold text-sm">FRIDAY, 14 NOV 2026</span>
+                <span className="text-white font-bold text-sm">SATURDAY, 14 NOV 2026</span>
               </div>
               <div>
                 <span className="text-zinc-500 uppercase block mb-1">HOURS:</span>

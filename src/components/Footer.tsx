@@ -14,13 +14,15 @@ export const Footer: React.FC = () => {
           <div className="flex items-center gap-8">
             {/* Amine Woods Logo */}
             <div className="flex flex-col items-center">
-              <img
-                src="/assets/2.png"
-                alt="Amine Woods Logo"
-                className="h-10 sm:h-12 w-auto invert filter brightness-200"
-              />
-              <span className="text-[10px] uppercase tracking-widest text-zinc-500 mt-2 font-bold">
-                AMINE WOODS ATELIER
+              <div className="h-20 sm:h-24 overflow-hidden flex items-center justify-center">
+                <img
+                  src="/assets/Amine_Logo.png"
+                  alt="Amine Woods Logo"
+                  className="h-36 sm:h-44 w-auto max-w-none -mx-4 object-contain brightness-125 contrast-125 drop-shadow-[0_2px_10px_rgba(255,229,0,0.25)]"
+                />
+              </div>
+              <span className="text-[10px] uppercase tracking-widest text-zinc-500 mt-1 font-bold">
+                AMINEWOODS
               </span>
             </div>
 
@@ -70,7 +72,7 @@ export const Footer: React.FC = () => {
             <h5 className="font-bold uppercase tracking-wider text-white mb-3 text-xs">CURATION</h5>
             <p className="text-zinc-300">Upcycled Garments: Amine Woods</p>
             <p className="text-zinc-300 mt-1">Original Paintings: Senamie</p>
-            <p className="text-zinc-300 mt-1">Spatial Design: Mothrland</p>
+            <p className="text-zinc-300 mt-1">Creative Space: Mothrland</p>
           </div>
 
           <div>
@@ -87,7 +89,7 @@ export const Footer: React.FC = () => {
         {/* Bottom credits & Back to top */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-zinc-500">
           <div className="flex items-center gap-1">
-            <span>© 2026 Amine Woods × Mothrland Atelier.</span>
+            <span>© 2026 AmineWoods × Mothrland Atelier.</span>
           </div>
 
           <button

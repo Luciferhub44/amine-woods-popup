@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { MarqueeBanner } from './components/MarqueeBanner';
@@ -8,23 +8,17 @@ import { GarmentLanguage } from './components/GarmentLanguage';
 import { InTheRoom } from './components/InTheRoom';
 import { LocationGuide } from './components/LocationGuide';
 import { Footer } from './components/Footer';
-import { RsvpPassModal } from './components/RsvpPassModal';
 
 export const App: React.FC = () => {
-  const [isRsvpOpen, setIsRsvpOpen] = useState(false);
-
-  const handleOpenRsvp = () => setIsRsvpOpen(true);
-  const handleCloseRsvp = () => setIsRsvpOpen(false);
-
   return (
     <div className="min-h-screen bg-brand-darker text-white flex flex-col font-sans selection:bg-brand-yellow selection:text-black">
       {/* Sticky Header Navigation */}
-      <Navbar onOpenRsvp={handleOpenRsvp} />
+      <Navbar />
 
       {/* Main Content Sections */}
       <main className="flex-1">
         {/* Hero Stage with 3D Pop Up Graphics & Countdown */}
-        <Hero onOpenRsvp={handleOpenRsvp} />
+        <Hero />
 
         {/* Dynamic Yellow Ticker */}
         <MarqueeBanner theme="yellow" />
@@ -76,12 +70,6 @@ export const App: React.FC = () => {
 
       {/* Footer */}
       <Footer />
-
-      {/* Digital Guest Pass RSVP Modal */}
-      <RsvpPassModal
-        isOpen={isRsvpOpen}
-        onClose={handleCloseRsvp}
-      />
     </div>
   );
 };

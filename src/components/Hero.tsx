@@ -4,10 +4,10 @@ import { CountdownTimer } from './CountdownTimer';
 import { downloadIcsFile, getGoogleCalendarUrl } from '../utils/calendar';
 
 interface HeroProps {
-  onOpenRsvp: () => void;
+  onOpenRsvp?: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onOpenRsvp }) => {
+export const Hero: React.FC<HeroProps> = () => {
   return (
     <section className="relative min-h-[92vh] flex flex-col justify-between overflow-hidden bg-brand-darker border-b-2 border-brand-yellow/30">
       {/* Background Graphic Asset from poster */}
@@ -33,8 +33,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRsvp }) => {
         {/* Main Event Headline */}
         <h1 className="mt-4 mb-6 flex flex-wrap items-center justify-center gap-3 sm:gap-6 font-mono text-3xl sm:text-5xl md:text-6xl font-black tracking-widest text-zinc-300 uppercase">
           <span className="text-brand-yellow">AMINE WOODS</span>
-          <span className="text-brand-red font-bold">✕</span>
-          <span className="text-white tracking-wider">MOTHRLAND ATELIER</span>
         </h1>
 
         {/* Key Event Badges */}
@@ -60,37 +58,27 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRsvp }) => {
         </div>
 
         {/* Call To Actions */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 w-full max-w-md">
+        <div className="flex items-center justify-center gap-3 mt-8">
           <button
-            onClick={onOpenRsvp}
+            onClick={() => downloadIcsFile()}
             type="button"
-            className="w-full sm:w-auto flex-1 flex items-center justify-center gap-3 bg-brand-yellow hover:bg-brand-yellowHover text-black font-mono font-black text-sm uppercase px-8 py-4 border-2 border-black shadow-brutal-yellow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all"
+            className="flex items-center justify-center gap-2 bg-brand-card hover:bg-zinc-800 text-white font-mono font-bold text-xs uppercase px-5 py-4 border-2 border-zinc-700 hover:border-brand-yellow transition-colors"
+            title="Add to Apple Calendar"
           >
-            <span>CLAIM FREE PASS</span>
+            <Download className="w-4 h-4 text-brand-yellow" />
+            <span>.ICS</span>
           </button>
 
-          <div className="flex items-center gap-2 w-full sm:w-auto">
-            <button
-              onClick={() => downloadIcsFile()}
-              type="button"
-              className="flex-1 sm:flex-none flex items-center justify-center gap-2 bg-brand-card hover:bg-zinc-800 text-white font-mono font-bold text-xs uppercase px-4 py-4 border-2 border-zinc-700 hover:border-brand-yellow transition-colors"
-              title="Download iCal file"
-            >
-              <Download className="w-4 h-4 text-brand-yellow" />
-              <span>.ICS</span>
-            </button>
-
-            <a
-              href={getGoogleCalendarUrl()}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 sm:flex-none flex items-center justify-center gap-2 bg-brand-card hover:bg-zinc-800 text-white font-mono font-bold text-xs uppercase px-4 py-4 border-2 border-zinc-700 hover:border-brand-yellow transition-colors"
-              title="Add to Google Calendar"
-            >
-              <ExternalLink className="w-4 h-4 text-brand-yellow" />
-              <span>GOOGLE CAL</span>
-            </a>
-          </div>
+          <a
+            href={getGoogleCalendarUrl()}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 bg-brand-card hover:bg-zinc-800 text-white font-mono font-bold text-xs uppercase px-5 py-4 border-2 border-zinc-700 hover:border-brand-yellow transition-colors"
+            title="Add to Google Calendar"
+          >
+            <ExternalLink className="w-4 h-4 text-brand-yellow" />
+            <span>GOOGLE CAL</span>
+          </a>
         </div>
       </div>
 
