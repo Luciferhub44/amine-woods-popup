@@ -111,10 +111,10 @@ export const LocationGuide: React.FC = () => {
             <div className="space-y-1.5 pt-4 border-t border-zinc-800">
               <div className="flex items-center gap-2 text-brand-red font-bold uppercase">
                 <ShieldCheck className="w-4 h-4" />
-                <span>COURTYARD ACCESS</span>
+                <span>ENTRANCE ACCESS</span>
               </div>
               <p className="text-zinc-300 leading-relaxed">
-                Enter through the archway into the main courtyard. Press <strong className="text-brand-yellow">09</strong> on the intercom or follow directional signs.
+                AT THE DOOR. Press <strong className="text-brand-yellow">09</strong> TO BE GRANTED ACCESS.
               </p>
             </div>
           </div>
